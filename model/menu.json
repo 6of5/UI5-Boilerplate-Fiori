@@ -1,0 +1,23 @@
+{
+    "Menu": [{
+        "title": "Coffee Menu",
+        "icon": "sap-icon://list",
+        "targetPage": "CoffeeList",
+        "description": "Coffee Menu"
+    }, {
+        "title": "Shopping Cart",
+        "icon": "sap-icon://cart",
+        "targetPage": "Cart",
+        "description": "Order Items"           
+    }, {
+        "title": "New Features v1.22",
+        "icon": "sap-icon://favorite",
+        "targetPage": "NewFeatures-v122",
+        "description": "Demo - New v1.22 Features"        
+    }, {
+        "title": "About",
+        "icon": "sap-icon://sys-help",
+        "targetPage": "Info",
+        "description": "More Information"
+    }]
+}

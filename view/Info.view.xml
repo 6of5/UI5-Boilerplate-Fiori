@@ -1,0 +1,52 @@
+<core:View
+    controllerName="ui5bp.view.Info"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core" >
+    <Page
+        title="{i18n>WELCOME_TITLE}"
+        enableScrolling="true"
+        showNavButton="{device>/isPhone}"
+        navButtonPress="doNavBack" >  
+        <headerContent>
+            <Button
+                icon="sap-icon://home"
+                tooltip="Back to Launchpad"
+                visible="{device>/launchpadMode}"
+                press="doNavBackLaunchpad"
+                >
+            </Button>
+        </headerContent>              
+        <footer>
+            <Bar>
+            </Bar>
+        </footer>
+        <content>
+            <VBox
+                alignItems="Center"
+                justifyContent="Center" >
+                <Text
+                    text="{i18n>WELCOME_INFO}"
+                    class="welcomeText" >
+                </Text>
+                <Link
+                    text="http://blog.mypro.de"
+                    href="http://blog.mypro.de/tag/ui5boilerplate/" >
+                </Link>  
+                <Link
+                    text="UI5 Boilerplate Wiki Page"
+                    href="https://www.6of5.com/6of5/go/show/1001/UI5/displaypage.htm?PAGE=UI5Boilerplate" >
+                </Link>                   
+                <Text
+                    text="UI5 Boilerplate Fiori on GitHub:"
+                    class="welcomeText" >
+                </Text>
+                <Link
+                    text="https://github.com/6of5/UI5-Boilerplate-Fiori"
+                    href="https://github.com/6of5/UI5-Boilerplate-Fiori" >
+                </Link>                            
+                <Image
+                    id="ui5logo" />                
+            </VBox>
+        </content>
+    </Page>
+</core:View>
