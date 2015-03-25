@@ -49,7 +49,7 @@ sap.ui.jsview("ui5bp.view.Launchpad", {
             }),
             footer: new sap.m.Bar({
                 contentMiddle: [new sap.m.Link("myproLinkLP", {
-                    text: "v0.8.0",
+                    text: "v0.8.1",
                     href: "http://blog.mypro.de/tag/ui5boilerplate/"
                 })]
 

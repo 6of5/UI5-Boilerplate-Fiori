@@ -48,28 +48,7 @@ sap.ui.core.UIComponent.extend("ui5bp.Component", {
 					viewLevel: 0,
 					targetAggregation: "masterPages"
 
-			}, {
-					pattern: "CoffeeList",
-					name: "CoffeeList",
-					viewLevel: 1,
-					view: "CoffeeList"
-			}, {
-					pattern: "Cart",
-					name: "Cart",
-					viewLevel: 1,
-					view: "Cart"
-			}, {
-					pattern: "NewFeatures-v122",
-					name: "NewFeatures-v122",
-					viewLevel: 1,
-					view: "NewFeatures-v122"
-			}, {
-					pattern: "Info",
-					name: "Info",
-					viewLevel: 1,
-					view: "Info",
-					viewType: "XML"
-				}
+			}
 			]
 		}
 	},
@@ -91,6 +70,27 @@ sap.ui.core.UIComponent.extend("ui5bp.Component", {
 		var router = this.getRouter();
 		router.initialize();
 
+		//load routes from menu.json
+        var model = new sap.ui.model.json.JSONModel(rootPath + "/model/menu.json");
+        model.attachRequestCompleted(null, function() {
+            var data = null, m = 0, menu = null, routeConfig = null;
+            data = model.getData();
+            if (data && data.Menu) {
+                for (m = 0; m < data.Menu.length; m++) {
+                    menu = data.Menu[m];
+                    routeConfig = {
+                    	name : menu.targetPage,
+                    	pattern : menu.targetPage,
+                    	view : menu.targetPage,
+                    	viewLevel : 1
+                    };
+                    if(menu.viewType){
+                    	routeConfig.viewType = menu.viewType;
+                    }
+                    router.addRoute(routeConfig);
+                }
+            }
+        });
 
         if(ui5bp.app.config.LaunchpadMode){
             router.navTo("Launchpad");
