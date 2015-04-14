@@ -1,4 +1,5 @@
-// ======= HECQTA ========
+jQuery.sap.require("ui5bp.app.config");
+
 sap.ui.jsview("ui5bp.view.Launchpad", {
 
     getControllerName: function() {

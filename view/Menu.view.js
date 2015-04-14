@@ -1,3 +1,5 @@
+jQuery.sap.require("ui5bp.app.config");
+
 sap.ui.jsview("ui5bp.view.Menu", {
 
     getControllerName: function() {
@@ -41,7 +43,7 @@ sap.ui.jsview("ui5bp.view.Menu", {
             content: [oList],
             footer: new sap.m.Bar({
                 contentMiddle: [new sap.m.Link("myproLink", {
-                    text: "v0.8.1",
+                    text: "v" + ui5bp.app.config.APP_VERSION,
                     href: "http://blog.mypro.de/tag/ui5boilerplate/"
                 })]
             })
