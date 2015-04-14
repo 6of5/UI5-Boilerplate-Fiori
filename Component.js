@@ -5,7 +5,7 @@ jQuery.sap.require("sap.m.routing.RouteMatchedHandler");
 sap.ui.core.UIComponent.extend("ui5bp.Component", {
 	metadata: {
 		"name": "UI5 Boilerplate Fiori",
-		"version": "0.8.0",
+		"version": ui5bp.app.config.APP_VERSION,
 		"includes": ["css/style.css"],
 		"dependencies": {
 			"libs": ["sap.m"],
