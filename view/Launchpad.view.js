@@ -44,7 +44,7 @@ sap.ui.jsview("ui5bp.view.Launchpad", {
                     height: "35px"
                 }).addStyleClass("ui5Logo")],
                 contentMiddle: [new sap.m.Text({
-                    text: "UI5 Boilerplate Launchpad"
+                    text: "{i18n>WELCOME_TITLE} Launchpad"
                 })]
             }),
             footer: new sap.m.Bar({

@@ -1,5 +1,3 @@
-jQuery.sap.require("ui5bp.app.config");
-
 sap.ui.jsview("ui5bp.view.Menu", {
 
     getControllerName: function() {
@@ -7,16 +5,19 @@ sap.ui.jsview("ui5bp.view.Menu", {
     },
 
     createContent: function(oController) {
-        
+
         var oListTemplate = new sap.m.StandardListItem({
             title: "{title}",
             icon: "{icon}",
             description: "{description}",
             type: sap.m.ListType.Navigation,
-            customData: new sap.ui.core.CustomData({
+            customData: [new sap.ui.core.CustomData({
                 key: "targetPage",
                 value: "{targetPage}"
-            })
+            }), new sap.ui.core.CustomData({
+                key: "targetAggregation",
+                value: "{targetAggregation}"
+            })]
         });
 
         var oList = new sap.m.List({
@@ -40,7 +41,7 @@ sap.ui.jsview("ui5bp.view.Menu", {
             content: [oList],
             footer: new sap.m.Bar({
                 contentMiddle: [new sap.m.Link("myproLink", {
-                    text: "v" + ui5bp.app.config.APP_VERSION,
+                    text: "v0.8.1",
                     href: "http://blog.mypro.de/tag/ui5boilerplate/"
                 })]
             })

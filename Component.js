@@ -87,6 +87,18 @@ sap.ui.core.UIComponent.extend("ui5bp.Component", {
                     if(menu.viewType){
                     	routeConfig.viewType = menu.viewType;
                     }
+                    if(menu.pattern){
+                    	routeConfig.pattern = menu.pattern;
+                    }
+                    if(menu.targetAggregation){
+                    	routeConfig.targetAggregation = menu.targetAggregation;
+                    }
+                    if(menu.viewLevel){
+                    	routeConfig.viewLevel = menu.viewLevel;
+                    }                    
+                    if(menu.subroutes){
+                    	routeConfig.subroutes = menu.subroutes;
+                    }
                     router.addRoute(routeConfig);
                 }
             }

@@ -15,8 +15,13 @@ sap.ui.controller("ui5bp.view.Menu", {
         if (sap.ui.Device.system.phone) {
             event.getParameter("listItem").setSelected(false);
         }
+        var customData = event.getParameter('listItem').getCustomData();
         this.bus.publish("nav", "to", {
-            id: event.getParameter('listItem').getCustomData()[0].getValue()
+            id: customData[0].getValue()
         });
+        //remove selection in menu for master pages targets
+        if(customData[1].getValue() === "masterPages"){
+            event.getParameter("listItem").setSelected(false);            
+        }
     }
 });
