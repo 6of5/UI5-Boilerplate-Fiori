@@ -1,5 +1,10 @@
 {
     "Menu": [{
+        "title": "User Information",
+        "icon": "sap-icon://person-placeholder",
+        "targetPage": "UserInfo",
+        "description": "Info of logged in User"
+    }, {
         "title": "Coffee Menu",
         "icon": "sap-icon://list",
         "targetPage": "CoffeeList",

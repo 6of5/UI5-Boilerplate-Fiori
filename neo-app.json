@@ -2,6 +2,13 @@
     "authenticationMethod": "none",
     "welcomeFile": "index.html",
     "routes": [{
+        "path": "/services/userapi",
+        "target": {
+            "type": "service",
+            "name": "userapi"
+        },
+        "description": " User API of HCP"
+    }, {
         "path": "/resources",
         "target": {
             "type": "service",
