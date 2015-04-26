@@ -1,0 +1,19 @@
+{
+  "name": "UI5BPFiori",
+  "version": "0.8.4",
+  "description": "UI5 Boilerplate Fiori Edition",
+  "author": "HP Seitz <information@6of5.com>",
+  "homepage": "https://github.com/6of5/UI5-Boilerplate-Fiori",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/6of5/UI5-Boilerplate-Fiori.git"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-if": "^1.2.5",
+    "gulp-pretty-data": "^0.1.1",
+    "gulp-uglify": "^1.2.0",
+    "gulp-ui5-preload": "^1.1.2"
+  }
+}
