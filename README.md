@@ -25,12 +25,25 @@ More Info can be found here:
 * Based on OpenUI5, more Infos under [http://sap.github.io/openui5/](http://sap.github.io/openui5/)
 * Based on sap.m library of UI5, which provide touch optimized controls
 * Follows "Mobile First" approach, but App also works on Desktop (Chrome latest, Firefox latest, Safari, IE9 and IE10)
+* A self-contaning UI5 Component
 * Uses Routing
 * Default file structure (i18n, model, view, css, js)
 * Navigation via LeftMenu navigation (default) or Launchpad of App itself 
 * Automatic generation of navigation items (Launchpad or LeftMenu) and routing.
 * i18n base model
 * Fiori compliant (hopefully)
+** Usage of EventBus of Component
+
+## generate Component-preload.js file
+* Prerequities: node.js and gulp are installed
+execute the following command in the root folder to install necessary packages
+```
+npm install
+```
+to generate Component-preload.js run in the root folder:
+```
+gulp ui5-preload
+```
 
 ## Screenshot
 integrated into SAP Fiori Launchpad on HANA Cloud Platform
@@ -39,5 +52,5 @@ integrated into SAP Fiori Launchpad on HANA Cloud Platform
 ## License
 Apache License, Version 2.0
 
-![ui5 Logo](http://blog.mypro.de/wp-content/uploads/2014/01/ui5_144.jpg)
+![ui5 boilerplate fiori Logo](http://blog.mypro.de/wp-content/uploads/2015/04/ui5-fiori.png)
 
