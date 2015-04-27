@@ -1,5 +1,4 @@
 node_modules
-Component-preload.js
 resources
 *.lock
 *.DS_Store
